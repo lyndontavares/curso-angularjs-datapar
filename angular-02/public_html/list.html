@@ -1,0 +1,19 @@
+<h2>Fruits ({{fruits.length}})</h2>
+
+<h2>Fruits 1</h2>
+<ul>
+        <li ng-repeat="fruit in fruits">
+            <a href="#/edit/{{fruit}}">{{fruit}}</a>
+        </li> 
+</ul>
+
+<a href="#/new">New</a>
+
+<h2> Fruits 2</h2>
+ <ul>
+        <li ng-repeat="fruit in fruits2">
+            <a href="#/edit2/{{fruit.id}}">{{fruit.id}} : {{fruit.name}} : {{fruit.color}}</a>
+        </li> 
+ </ul>
+
+

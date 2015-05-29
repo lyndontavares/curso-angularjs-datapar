@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html ng-app="leroLeroApp">
+
+  <head>
+    <title>Gerador de Lero Lero</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="prefixfree.min.js"></script>
+    
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body>
+  
+    <div class="wrapper">
+      <div class="content" ng-controller="MainCtrl">
+      
+        <div class="side">
+          <div class="ovelha"> 
+          
+            <h1>Lero Lero</h1>
+            
+            <a ng-click="frase.gerar()" id="gerar-frase" href="">
+              Gerar frase
+            </a>
+            
+          </div>
+        </div>
+        
+        <article class="main">
+          <blockquote class="frase">
+            {{ frase.atual }}
+          </blockquote>  
+
+          <a tweet-link class="tweet-button" target="_blank"
+             sentence="{{ frase.atual | tweet }}">Tuitar</a>
+             
+        </article>
+        
+      </div>
+    </div>
+    
+  </body>
+
+</html>

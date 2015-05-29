@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+
+       <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.2/angular.min.js"></script>
+        <script src="script.js"></script>
+
+    </head>
+    <body ng-app="scopeExample">
+        <div ng-controller="MyController">
+            Seu nome:
+            <input type="text" ng-model="username">
+            <button ng-click='sayHello()'>Entrar</button>
+            <hr>
+            {{greeting}}
+        </div>
+
+        <script>
+
+            'use strict';
+            angular.module('scopeExample', [])
+                    .controller('MyController', ['$scope', function ($scope) {
+
+                            $scope.username = 'Lyndon';
+
+                            $scope.sayHello = function () {
+                                $scope.greeting = 'Olá ' + $scope.username + '!';
+                            };
+                        }]);
+
+        </script>
+
+
+    </body>
+</html>
